@@ -1,0 +1,4 @@
+margin = 80
+always_for_in = true
+trailing_comma = true
+remove_extra_newlines = true

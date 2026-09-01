@@ -1,0 +1,42 @@
+name = "SymbolicUncertainties"
+uuid = "e1e776fa-b848-4db9-b655-ecac6e4889a3"
+version = "0.10.0"
+authors = ["Sébastien Celles <s.celles@gmail.com>"]
+
+[deps]
+PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+
+[weakdeps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DynamicQuantities = "06fc5a27-2a28-4c7c-a15d-362465fb6821"
+Giac = "e4421f97-9838-4fd0-9fa5-94f11373bf78"
+Latexify = "23fbe1c1-3f47-55db-b15f-69d7ec21a316"
+Measurements = "eff96d63-e80a-5855-80a2-b1b0885c5ab7"
+MonteCarloMeasurements = "0987c9cc-fe09-11e8-30f0-b96dd679fdca"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+
+[extensions]
+SymbolicUncertaintiesDataFramesExt = "DataFrames"
+SymbolicUncertaintiesDynamicQuantitiesExt = "DynamicQuantities"
+SymbolicUncertaintiesGiacExt = "Giac"
+SymbolicUncertaintiesLatexifyExt = "Latexify"
+SymbolicUncertaintiesMeasurementsExt = "Measurements"
+SymbolicUncertaintiesMonteCarloExt = ["MonteCarloMeasurements", "Distributions"]
+SymbolicUncertaintiesModelingToolkitExt = "ModelingToolkit"
+
+[compat]
+DataFrames = "1"
+DynamicQuantities = "1"
+Giac = "0.11"
+Latexify = "0.16"
+Measurements = "2"
+ModelingToolkit = "11"
+MonteCarloMeasurements = "1"
+Distributions = "0.25"
+PrecompileTools = "1"
+Printf = "1"
+Symbolics = "7"
+julia = "1.10"

@@ -1,0 +1,23 @@
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+DocumenterLandingPage = "1c52b33b-3e2f-4e99-b3b5-a6ad63f0d6d2"
+DynamicQuantities = "06fc5a27-2a28-4c7c-a15d-362465fb6821"
+Latexify = "23fbe1c1-3f47-55db-b15f-69d7ec21a316"
+Measurements = "eff96d63-e80a-5855-80a2-b1b0885c5ab7"
+MonteCarloMeasurements = "0987c9cc-fe09-11e8-30f0-b96dd679fdca"
+SymbolicUncertainties = "e1e776fa-b848-4db9-b655-ecac6e4889a3"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
+[compat]
+DataFrames = "1"
+Distributions = "0.25"
+Documenter = "1"
+DocumenterLandingPage = "0.2"
+DynamicQuantities = "1"
+Latexify = "0.16"
+Measurements = "2"
+MonteCarloMeasurements = "1"
+julia = "1.10"

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: SymbolicUncertainties.jl
+message: >-
+  If you use this software in work that leads to a publication, please
+  cite it. The licence does not require this — no OSI-approved licence
+  can — but citation is how scientific software stays maintained.
+type: software
+authors:
+  - family-names: Celles
+    given-names: Sébastien
+    email: s.celles@gmail.com
+repository-code: https://github.com/s-celles/SymbolicUncertainties.jl
+url: https://s-celles.github.io/SymbolicUncertainties.jl/
+abstract: >-
+  Purely symbolic propagation of measurement uncertainties following
+  JCGM 100:2008 (GUM). Quantities carry the independent sources they
+  derive from, so combined uncertainties, sensitivity coefficients,
+  budgets and covariances are all derived from one structure, and
+  correlation between quantities sharing an upstream measurement is
+  propagated without a user-supplied covariance matrix.
+keywords:
+  - uncertainty propagation
+  - metrology
+  - GUM
+  - JCGM 100:2008
+  - symbolic computation
+  - measurement uncertainty
+  - Julia
+license: BSD-3-Clause
+version: 0.10.0
