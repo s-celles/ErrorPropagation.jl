@@ -1248,5 +1248,10 @@ Because an Ishikawa graph is qualitative ("X causes Y") but `SymbolicUncertainti
 - **Scaffolding Mode (Generator):** Read the graph and emit a `.jl` script pre-filled with all variable definitions and `uncertainty_budget()` calls, leaving just a blank `Y = ...` line for the user to type the equation.
 - **Full-Auto Mode:** If the `CausalGraphs.jl` nodes/edges hold an `[:expr]` metadata field (e.g., `:(L_s + d)`), the bridge uses `Meta.parse` and symbolic substitution to instantly compute the sensitivities and budget without any manual coding from the user.
 
+#### 4. The Reverse Bridge (Equation ➔ Graph)
+A killer feature for **Auditing and Quality Reporting (ISO 17025)**. Instead of drawing a graph to generate math, the user provides a mathematical expression and the system parses the `Symbolics.jl` AST to automatically generate the Ishikawa/Causal Graph.
+- **Explainability:** Instantly visualize hierarchical sub-models (e.g., `Area = w * l` and `Volume = Area * h`).
+- **Auto-Documentation:** Metrologists can generate perfectly accurate cause-effect graphs directly from legacy equations without manual drawing in PowerPoint or Visio.
+
 ### Impact
-This positions `SymbolicUncertainties.jl` not just as a computational engine, but as the first holistic tool capable of transforming a qualitative brainstorming session (Ishikawa) directly into a strict ISO/BIPM-compliant uncertainty budget.
+This positions `SymbolicUncertainties.jl` not just as a computational engine, but as the first holistic tool capable of transforming a qualitative brainstorming session (Ishikawa) directly into a strict ISO/BIPM-compliant uncertainty budget, and vice versa (auto-documenting code into visual graphs).
