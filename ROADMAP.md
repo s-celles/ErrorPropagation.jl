@@ -1217,3 +1217,36 @@ applied locally to `specification/ears.md` (which is git-ignored):
 5. REQ-005 citation moved from §4.3.1 to §4.1.5.
 6. REQ-040..REQ-044 budget attributions corrected to §5.1.3 + EA-4/02.
 7. REQ-003 transparency clause added re: `±` for `u_c` vs GUM §7.2.2.
+
+## Future Integration: CausalGraphs.jl Bridge (Package Extension)
+
+### Motivation
+Currently, users of `SymbolicUncertainties.jl` must construct their measurement models purely through code (e.g., `L = L_s + d + L_s * alpha * Theta`). However, in industrial practice, these models are often conceived visually as **Ishikawa (Fishbone) diagrams** or causal trees.
+
+By building a bridge to **`CausalGraphs.jl`** (via a weak dependency / Package Extension), we can allow `SymbolicUncertainties.jl` to automatically ingest qualitative causal graphs and convert them into executable GUM evaluations.
+
+### Implementation Strategy (The "Consumer" Pattern)
+To keep `CausalGraphs.jl` lightweight and agnostic, the intelligence of the bridge will reside here in `SymbolicUncertainties.jl`, specifically in a `SymbolicUncertaintiesCausalGraphsExt.jl` extension.
+
+#### 1. Ingesting the Graph
+We will implement an entry point such as:
+```julia
+# Triggered when both packages are loaded
+function SymbolicUncertainties.parse_measurement_model(m::CausalGraphs.MeasurementModel)
+    # ...
+end
+```
+This function will read the structural nodes (`inputs` and `output`) defined in the `CausalGraphs.MeasurementModel`.
+
+#### 2. Translation to Symbolic Variables
+For each input node in the causal graph (e.g., a `CauseNode` or `IntermediateNode`), the extension will:
+- Auto-generate the corresponding `@variables`.
+- Extract numerical values and uncertainties if they are embedded in the node's `metadata` (e.g., `metadata[:value]`, `metadata[:uncertainty]`), turning them into `Measurement` structs (`x ± u`).
+
+#### 3. Resolving the Mathematical Expression
+Because an Ishikawa graph is qualitative ("X causes Y") but `SymbolicUncertainties` requires an algebraic form ("Y = X^2"), the bridge will offer two modes:
+- **Scaffolding Mode (Generator):** Read the graph and emit a `.jl` script pre-filled with all variable definitions and `uncertainty_budget()` calls, leaving just a blank `Y = ...` line for the user to type the equation.
+- **Full-Auto Mode:** If the `CausalGraphs.jl` nodes/edges hold an `[:expr]` metadata field (e.g., `:(L_s + d)`), the bridge uses `Meta.parse` and symbolic substitution to instantly compute the sensitivities and budget without any manual coding from the user.
+
+### Impact
+This positions `SymbolicUncertainties.jl` not just as a computational engine, but as the first holistic tool capable of transforming a qualitative brainstorming session (Ishikawa) directly into a strict ISO/BIPM-compliant uncertainty budget.
