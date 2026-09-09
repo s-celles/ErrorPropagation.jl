@@ -33,7 +33,7 @@ systems via `ModelingToolkit.jl`.
 ## Status
 
 **Last release v0.10.0 (Milestone M10, pre-1.0); `main` carries
-M11 – M13, unreleased.** The stabilised M10 surface is symbolic
+M11 – M14, unreleased.** The stabilised M10 surface is symbolic
 uncertainty propagation (`propagate`, `propagate_vector`, `±`),
 sensitivity analysis (`sensitivity_coefficient`,
 `uncertainty_contribution`, `relative_sensitivity`), uncertainty
@@ -53,7 +53,7 @@ than a covariance matrix the caller must build; M12 added an opt-in,
 non-throwing dimensional checker (`check_units`); M13 added a
 certified bound on the linearisation (`linearisation_bound`) and the
 second-order term on the estimate that JCGM 100:2008/Amd.1:2026
-asks for (`second_order_correction`). `CHANGELOG.md` has the
+asks for (`second_order_correction`); M14 added a Monte Carlo cross-validation suite against JCGM 101:2008 (`monte_carlo`). `CHANGELOG.md` has the
 migration notes. See
 [`docs/src/methodology-reference.md`](https://s-celles.github.io/SymbolicUncertainties.jl/dev/methodology-reference/)
 for the full API-to-GUM-section mapping and
