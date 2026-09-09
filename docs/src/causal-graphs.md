@@ -29,7 +29,6 @@ The integration comes with two powerful tools:
 Often, you design the cause-and-effect structure of a measurement model before writing the equation. You can define your diagram in `CausalGraphs.jl`:
 
 ```julia
-using CausalGraphs
 using SymbolicUncertainties
 
 # Define nodes with values and uncertainties
