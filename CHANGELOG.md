@@ -6,6 +6,8 @@ v1.1.0](https://keepachangelog.com/en/1.1.0/), and this project adheres
 to [Semantic Versioning 2.0.0](https://semver.org/).
 
 ## [Unreleased]
+n### Added
+- **CausalGraphs.jl Integration**: `SymbolicUncertaintiesCausalGraphsExt` weak dependency extension providing `parse_measurement_model` (Scaffolding Mode) and `evaluate_measurement_model` (Full-Auto Mode) for generating uncertainty budgets directly from causal graphs/Ishikawa diagrams.
 
 ### Fixed — the budget no longer lists sources that carry no uncertainty
 
@@ -763,6 +765,8 @@ reading the code; all four needed the expressions to be *built*.
   what is actually the case: tracked, dormant, nothing expected soon.
 - `ROADMAP.md` described `LICENSE.md` as the MIT text; the file is
   BSD 3-Clause. The same claim in this changelog's `[Unreleased]`
+n### Added
+- **CausalGraphs.jl Integration**: `SymbolicUncertaintiesCausalGraphsExt` weak dependency extension providing `parse_measurement_model` (Scaffolding Mode) and `evaluate_measurement_model` (Full-Auto Mode) for generating uncertainty budgets directly from causal graphs/Ishikawa diagrams.
   section was corrected in the previous commit.
 
 ### Changed — specification traceability restored
@@ -1838,4 +1842,6 @@ API).
   `ROADMAP.md`.
 
 [Unreleased]: https://github.com/s-celles/SymbolicUncertainties.jl/compare/v0.0.1...HEAD
+n### Added
+- **CausalGraphs.jl Integration**: `SymbolicUncertaintiesCausalGraphsExt` weak dependency extension providing `parse_measurement_model` (Scaffolding Mode) and `evaluate_measurement_model` (Full-Auto Mode) for generating uncertainty budgets directly from causal graphs/Ishikawa diagrams.
 [0.0.1]: https://github.com/s-celles/SymbolicUncertainties.jl/releases/tag/v0.0.1

@@ -15,6 +15,7 @@ pages = [
     "Code Generation" => "code-generation.md",
     "Dimensional Analysis" => "dimensional-analysis.md",
     "Interoperability" => "interoperability.md",
+    "Causal Graphs" => "causal-graphs.md",
     "ODE Integration" => "ode-integration.md",
     "Worked Examples" => "worked-examples.md",
     "Metrology Gallery" => "metrology-gallery.md",

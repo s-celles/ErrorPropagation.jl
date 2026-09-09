@@ -44,7 +44,9 @@ export SymbolicMeasurement,
     propagate_ode,
     monte_carlo,
     MonteCarloComparison,
-    uncertainty_ode
+    uncertainty_ode,
+    parse_measurement_model,
+    evaluate_measurement_model
 
 # Re-exports from Symbolics for the code-generation target API.
 
@@ -102,6 +104,7 @@ include("certified.jl")
 include("codegen.jl")
 include("latex_stub.jl")
 include("mtk_stubs.jl")
+include("causal_stubs.jl")
 include("mc_stubs.jl")
 include("report.jl")
 include("certificate.jl")

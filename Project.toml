@@ -9,6 +9,7 @@ Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
 [weakdeps]
+CausalGraphs = "68db26a2-7c2b-457b-8f5d-f446513faf50"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 DynamicQuantities = "06fc5a27-2a28-4c7c-a15d-362465fb6821"
 Giac = "e4421f97-9838-4fd0-9fa5-94f11373bf78"
@@ -19,6 +20,7 @@ Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 
 [extensions]
+SymbolicUncertaintiesCausalGraphsExt = "CausalGraphs"
 SymbolicUncertaintiesDataFramesExt = "DataFrames"
 SymbolicUncertaintiesDynamicQuantitiesExt = "DynamicQuantities"
 SymbolicUncertaintiesGiacExt = "Giac"
@@ -28,6 +30,7 @@ SymbolicUncertaintiesMonteCarloExt = ["MonteCarloMeasurements", "Distributions"]
 SymbolicUncertaintiesModelingToolkitExt = "ModelingToolkit"
 
 [compat]
+CausalGraphs = "0.1"
 DataFrames = "1"
 DynamicQuantities = "1"
 Giac = "0.11"
