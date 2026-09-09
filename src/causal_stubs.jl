@@ -19,7 +19,7 @@ function parse_measurement_model(args...; kwargs...)
     throw(
         ArgumentError(
             "parse_measurement_model requires `CausalGraphs.jl`. " *
-            "Add `using CausalGraphs` to your session."
+            "Add `using CausalGraphs` to your session.",
         ),
     )
 end
@@ -42,7 +42,7 @@ function evaluate_measurement_model(args...; kwargs...)
     throw(
         ArgumentError(
             "evaluate_measurement_model requires `CausalGraphs.jl`. " *
-            "Add `using CausalGraphs` to your session."
+            "Add `using CausalGraphs` to your session.",
         ),
     )
 end
