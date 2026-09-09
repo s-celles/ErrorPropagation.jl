@@ -92,3 +92,10 @@ The system will:
 3. Differentiate to find sensitivities.
 4. Substitute the numerical values from each node's metadata.
 5. Return the evaluated numerical `UncertaintyBudget`.
+
+## API Reference
+
+```@docs
+parse_measurement_model
+evaluate_measurement_model
+```
