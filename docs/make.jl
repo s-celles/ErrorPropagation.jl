@@ -1,5 +1,6 @@
 using Documenter
 using DocumenterLandingPage
+using DocumenterMermaid
 using SymbolicUncertainties
 
 include("pages.jl")
