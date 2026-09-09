@@ -2,7 +2,7 @@
 
 In industrial metrology, measurement models are often conceived visually as **Ishikawa (Fishbone) diagrams** or causal trees. 
 
-`SymbolicUncertainties.jl` offers an experimental bridge to **[`CausalGraphs.jl`](https://github.com/xiangao/CausalGraphs.jl)** (see [documentation](https://xiangao.github.io/CausalGraphs.jl/dev/)), enabling you to automatically ingest qualitative causal graphs and convert them into executable GUM evaluations.
+`SymbolicUncertainties.jl` offers an experimental bridge to **[`CausalGraphs.jl`](https://github.com/s-celles/CausalGraphs.jl)** (see [documentation](https://s-celles.github.io/CausalGraphs.jl/dev/)), enabling you to automatically ingest qualitative causal graphs and convert them into executable GUM evaluations.
 
 ## Graphical Representation (Ishikawa Diagram)
 
